@@ -5,7 +5,7 @@ const Footer = () =>
     <div className="col-md-7">
       <ul className="nav">
         <li className="nav-item">
-          <a className="nav-link" href="#">Contact Us</a>
+          <a className="nav-link" href="https://www.themoviedb.org/">Movie Databse API</a>
         </li>
       </ul>
     </div>

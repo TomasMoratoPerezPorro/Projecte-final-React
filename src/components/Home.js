@@ -1,8 +1,8 @@
 import React from 'react';
-
-
 import FilterableMovieTable from './FilterableMovieTable';
 import Footer from './Footer';
+
+
 
 
 

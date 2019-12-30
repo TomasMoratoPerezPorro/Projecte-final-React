@@ -19,7 +19,7 @@ class Search extends React.Component {
         searchInputState: searchValue,
       });
   
-      {/*  executem el metode del parent que li hem passat com a props al fill */ }
+      /*  executem el metode del parent que li hem passat com a props al fill */ 
       this.props.greetHandler(searchValue);
     }
   

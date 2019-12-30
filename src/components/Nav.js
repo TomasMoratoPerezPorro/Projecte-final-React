@@ -12,7 +12,7 @@ const Nav = () =>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
           <Link to="/">
-            <a className="nav-item nav-link">Home</a>
+            <p className="nav-item nav-link">Home</p>
           </Link>
         </div>
       </div>

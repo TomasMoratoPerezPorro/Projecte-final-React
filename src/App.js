@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
 import Nav from './components/Nav';
@@ -8,6 +8,7 @@ import Jumbotron from './components/Jumbotron';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home';
 import DetailPage from './components/DetailPage';
+import ItemDetails from './components/ItemDetails';
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -18,10 +19,11 @@ function App() {
     <Router>
       <Nav />
       <Jumbotron />
-      <switch>
+      <Switch>
         <Route path={"/"} exact component={Home} />
-        <Route path={"/detailpage"} component={DetailPage} />
-      </switch>
+        <Route path={"/detailpage"} exact component={DetailPage} />
+        <Route path={"/detailpage/:id"} component={ItemDetails}/>
+      </Switch>
     </Router>
   );
 }
