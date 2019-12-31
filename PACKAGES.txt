@@ -1,0 +1,5 @@
+npm i --save @fortawesome/free-solid-svg-icons
+
+npm install react-router-dom
+
+npm install react-bootstrap bootstrap

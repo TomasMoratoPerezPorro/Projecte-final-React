@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaClock } from 'react-icons/fa';
+/* https://react-icons.netlify.com/#/icons/fa */
 
 class ItemDetails extends React.Component {
     constructor() {
@@ -40,12 +42,23 @@ class ItemDetails extends React.Component {
         }
         else {
             return (
-                <div className="container">
-                    <div className="mainDiv"><h1 id="toys" className="display-4 my-4 text-center text-muted">{moviesState.title}</h1></div>
-                    {console.log(this.props.match)}
-                    <div>
-                        <img src={imageUrl + posterPath} className="card-img-top" alt="imageFilm"></img>
+                <div className="container-fluid">
+                    <div className="row content">
+                        <div class="col-sm-6 sidenav text-center">
+                            <img src={imageUrl + posterPath} className="img-fluid" alt="imageFilm"></img>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <h1 id="toys" className="display-4 my-4 text-center text-muted">{moviesState.title}</h1>
+                            
+                            <div>
+                            <FaClock size={30} /><p>{moviesState.runtime} min</p>
+                            
+                            </div>
+                        </div>
                     </div>
+
+
 
                 </div>
             );

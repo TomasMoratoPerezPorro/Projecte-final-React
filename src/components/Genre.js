@@ -28,7 +28,7 @@ class Genre extends React.Component {
                 <p>Filter by Genre:</p>
                 <form onSubmit={this.handleFormSubmit}>
 
-                    <div className="form-check">
+                    <div className="form-check ">
                         <label>
                             <input
                                 type="radio"
