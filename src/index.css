@@ -18,6 +18,12 @@ code {
   text-align: center;
 }
 
+.centrar {
+  margin-top:auto;
+  margin-bottom:auto;
+  text-align:center;
+}
+
 
 .hovereffect {
   width: 100%;

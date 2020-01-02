@@ -1,5 +1,9 @@
-npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/free-solid-svg-icons NO
 
 npm install react-router-dom
 
 npm install react-bootstrap bootstrap
+
+https://react-icons.netlify.com/#/
+
+npm install react-icons --save
