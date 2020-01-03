@@ -37,8 +37,8 @@ class MovieCredits extends React.Component {
             return (
 
                 <div>
-                    <p>This is the cast</p>
-                    <div className="row">{this.state.movieCast.map((actor, index) => <ActorComponent key={index} ActorProps={actor} />)}</div>
+                    <h5>Featuring</h5>
+                    <div className="row mt-5">{this.state.movieCast.map((actor, index) => <ActorComponent key={index} ActorProps={actor} />)}</div>
                 </div>
 
             );
