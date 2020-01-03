@@ -73,8 +73,7 @@ class ItemDetails extends React.Component {
                                 <p>{moviesState.overview}</p>
                             </div>
 
-                            <div>
-                                <h5>CAST</h5>
+                            <div className="d-flex p-3 bg-secondary text-white justify-content-around rounded-lg ">
                                 <MovieCredits movieId={moviesState.id}/>
                             </div>
 

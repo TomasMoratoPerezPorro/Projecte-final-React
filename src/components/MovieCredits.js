@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ActorComponent from './ActorComponent';
 
 
 
@@ -7,12 +7,11 @@ class MovieCredits extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            movieCast: "",
-
+            movieCast: [],
+            loadingCredits: true,
         };
 
         this.componentDidMount = this.componentDidMount.bind(this);
-
     }
 
     componentDidMount() {
@@ -22,29 +21,24 @@ class MovieCredits extends React.Component {
             .then(json => {
                 console.log(json);
                 this.setState({
-                    movieCast: json,
-                    loading: false,
-
+                    movieCast: json.cast,
+                    loadingCredits: false,
                 });
             });
     }
 
 
-
-
-
     render() {
-        const { movieCast, loading } = this.state;
-        if (loading) {
+        const {loadingCredits } = this.state;
+        if (loadingCredits) {
             return <p>Loading...</p>;
         }
-        else {
+        else if(loadingCredits===false){
             return (
 
                 <div>
                     <p>This is the cast</p>
-                    
-
+                    <div className="row">{this.state.movieCast.map((actor, index) => <ActorComponent key={index} ActorProps={actor} />)}</div>
                 </div>
 
             );
