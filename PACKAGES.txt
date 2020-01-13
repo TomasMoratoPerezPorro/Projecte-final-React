@@ -1,4 +1,4 @@
-npm i --save @fortawesome/free-solid-svg-icons NO
+INSTALACIONS OBLIGATÒRIES PER AL FUNCIONAMENT COMPLERT
 
 npm install react-router-dom
 
