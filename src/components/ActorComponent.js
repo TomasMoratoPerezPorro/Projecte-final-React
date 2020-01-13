@@ -1,9 +1,6 @@
 import React from 'react';
 
-
 class ActorComponent extends React.Component {
-
-
 
     render() {
         let { ActorProps } = this.props;
@@ -17,10 +14,8 @@ class ActorComponent extends React.Component {
                         <img src={imageUrl + profile_path} className="card-img-top" alt="imageFilm"></img>
                         <p>{ActorProps.name}</p>
                     </div>
-
                 </div>
             );
-
         }
         else { return (null); }
     }

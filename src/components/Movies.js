@@ -9,7 +9,6 @@ class Movies extends React.Component {
       loading: true,
       searchInputState: "a",
       error: null,
-
     }
     this.componentDidMount = this.componentDidMount.bind(this);
   }
@@ -48,7 +47,6 @@ class Movies extends React.Component {
           this.setState({
             moviesState: json.results,
             loading: false,
-
           });
         });
     }
@@ -77,7 +75,6 @@ class Movies extends React.Component {
           this.setState({
             moviesState: json.results,
             loading: false,
-
           });
         });
 
@@ -87,15 +84,15 @@ class Movies extends React.Component {
   }
 
   render() {
-    const {  loading } = this.state;
+    const { loading } = this.state;
     if (loading) {
       return <p>Loading...</p>;
     }
     else {
       return (
-        <div>
-          <div className="mainDiv"><h1 id="toys" className="display-4 my-4 text-center text-muted">Movies</h1></div>
-          <div className="row">{this.state.moviesState.map((movie, index) => <CardComponent key={index} movieProps={movie} />)}</div>
+        <div className="divMovie container">
+          <h1 id="toys" className="display-4 h1 text-center">MOVIES</h1>
+          <div className="row movieCard">{this.state.moviesState.map((movie, index) => <CardComponent key={index} movieProps={movie} />)}</div>
         </div>
       );
     }

@@ -1,11 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,700&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Roboto';
-	font-weight:500;
-	
-	height:100%;
+  font-family: 'Rubik' !important;
+	font-weight:300 !important;
+	color: #DEF2F1 !important;
+  height:100%;
+  background-color: #17252A !important;
 }
 
 code {
@@ -13,19 +14,139 @@ code {
     monospace;
 }
 
+.display-2{
+  font-weight:700 !important;
+}
 
+.display-4{
+  font-weight:700 !important;
+  margin-bottom: -25px !important;
+}
 
+.h1{
+  font-size: 85px !important;
+  color: #3AAFA9 !important;
+  letter-spacing: -3px !important;
+}
+
+.h2{
+  font-weight:700 !important;
+  font-size: 30px !important;
+  letter-spacing: 2px !important;
+  color: #2B7A78!important;
+  letter-spacing: -3px;
+  margin-bottom: -9px !important;
+}
+
+.divMovie{
+  margin-top: 40px;
+  float: none;
+}
+
+.btn_back{
+width:10%;
+}
+
+.back{
+  align-content: center !important;
+  text-align: center !important;
+  margin: 20px;
+}
+
+.h5{
+  font-weight:700 !important;
+}
+
+.buscador{
+background-color: #2B7A78!important;
+padding: 30px;
+border-radius: 20px;
+text-align: center;
+}
+
+.form-group{
+  text-align: center !important;
+}
+
+.bold{
+  font-weight:700 !important;
+}
+
+.card-img-top{
+  border-radius: 20px !important;
+}
+
+.movieCard{
+background-color:#3AAFA9 !important;
+padding-right: 20px;
+padding-left: 20px;
+padding-bottom:  20px;
+padding-top: 30px;
+border-radius: 20px;
+}
+
+.actors{
+  background-color: #2B7A78;
+  color: #fff !important;
+  border-radius: 20px !important;
+}
+
+.featuring{
+  padding-bottom: -50px !important;
+  margin-bottom: -50px !important;
+
+}
+.info{
+  background-color: #3AAFA9 !important;
+  border-radius: 20px !important;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.borde_rodo{
+  border-radius: 20px !important;
+   margin-top: 30px; 
+}
+
+.col-md-7{
+padding-left: 50px !important;
+padding-right: 70px !important;
+}
+
+.noFloat{
+  float: none;
+}
+
+.btn-primary{
+  background-color: #3AAFA9 !important;
+  border-color: #3AAFA9 !important;
+}
+
+.center{
+  text-align: center !;
+}
+
+.jumbotron{
+padding: 0px !important;
+background-color: #17252A !important;
+}
 
 .mainDiv{
   text-align: center;
 }
 
 .centrar {
-  margin-top:auto;
+  margin-top:20px;
   margin-bottom:auto;
-  text-align:center;
+  text-align:center !important;
 }
 
+.footer{
+  background-color: #3AAFA9 !important;
+  margin-top: 50px;
+  color: #e1e1e1 !important;
+  padding: 20px;
+}
 
 .hovereffect {
   width: 100%;

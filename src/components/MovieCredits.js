@@ -10,12 +10,10 @@ class MovieCredits extends React.Component {
             movieCast: [],
             loadingCredits: true,
         };
-
         this.componentDidMount = this.componentDidMount.bind(this);
     }
 
     componentDidMount() {
-
         fetch("https://api.themoviedb.org/3/movie/" + this.props.movieId + "/credits?api_key=fbcaaa47e4bdda5fd91da6cceac86b32")
             .then(response => response.json())
             .then(json => {
@@ -29,22 +27,18 @@ class MovieCredits extends React.Component {
 
 
     render() {
-        const {loadingCredits } = this.state;
+        const { loadingCredits } = this.state;
         if (loadingCredits) {
             return <p>Loading...</p>;
         }
-        else if(loadingCredits===false){
+        else if (loadingCredits === false) {
             return (
-
                 <div>
-                    <h5>Featuring</h5>
+                    <p className="bold featuring">FEATURING:</p>
                     <div className="row mt-5">{this.state.movieCast.map((actor, index) => <ActorComponent key={index} ActorProps={actor} />)}</div>
                 </div>
-
             );
-
         }
-
     }
 }
 

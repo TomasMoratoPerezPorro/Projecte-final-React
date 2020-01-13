@@ -1,13 +1,12 @@
 import React from 'react';
+import logo_movie from './jumbotron.png';
+import { Link } from 'react-router-dom';
 
 const Jumbotron = () =>
-  <div className="jumbotron jumbotron-fluid bg-info text-white">
-    <div className="container text-sm-center pt-5">
-      <h1 className="display-2">Movies List</h1>
-      <p className="lead">The ultimate movie listing service</p>
-      {/* <FilterBox /> */}
-
+  <Link to="/">
+    <div className="jumbotron jumbotron-fluid text-white">
+      <img className="img-fluid centre" src={logo_movie} alt=""></img>
     </div>
-  </div>;
+  </Link>
 
 export default Jumbotron 

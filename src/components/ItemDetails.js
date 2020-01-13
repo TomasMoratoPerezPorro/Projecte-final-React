@@ -1,6 +1,8 @@
 import React from 'react';
 import MovieCredits from './MovieCredits';
 import { FaClock, FaCalendarAlt, FaStar } from 'react-icons/fa';
+import button_back from './button_back.png';
+import { Link } from 'react-router-dom';
 /* https://react-icons.netlify.com/#/icons/fa */
 /* https://www.w3schools.com/bootstrap4/bootstrap_flex.asp */
 
@@ -11,16 +13,12 @@ class ItemDetails extends React.Component {
             moviesState: [],
             loading: true,
             error: null,
-
         }
         this.componentDidMount = this.componentDidMount.bind(this);
     }
 
 
-
-    
     componentDidMount() {
-
         fetch(" https://api.themoviedb.org/3/movie/" + this.props.match.params.id + "?api_key=fbcaaa47e4bdda5fd91da6cceac86b32")
             .then(response => response.json())
             .then(json => {
@@ -28,7 +26,6 @@ class ItemDetails extends React.Component {
                 this.setState({
                     moviesState: json,
                     loading: false,
-
                 });
             });
     }
@@ -43,17 +40,20 @@ class ItemDetails extends React.Component {
         }
         else {
             return (
-                <div className="container-fluid">
-                    <div className="row content">
-
-                        <div className="col-sm-6 sidenav text-center">
-                            <img src={imageUrl + posterPath} className="img-fluid" alt="imageFilm"></img>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-7">
                         </div>
-
-                        <div className="col-sm-6">
-                            <h1 id="toys" className="display-4 my-4 text-center text-muted">{moviesState.title}</h1>
-
-                            <div className="d-flex p-3 bg-secondary text-white justify-content-around rounded-lg ">
+                        <div className="col-sm-5">
+                            <h1 id="toys" className="display-4 my-4">{moviesState.title}</h1>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-7">
+                            <img src={imageUrl + posterPath} className="borde_rodo  img-fluid" alt="imageFilm"></img>
+                        </div>
+                        <div className="col-sm-5">
+                            <div className="d-flex info justify-content-around">
                                 <div className="p-2 centrar">
                                     <FaClock size={30} className="mb-2 " />
                                     <p >{moviesState.runtime} min</p>
@@ -66,22 +66,18 @@ class ItemDetails extends React.Component {
                                     <FaStar size={30} className="mb-2" />
                                     <p>{moviesState.vote_average} /10</p>
                                 </div>
-
                             </div>
-
-                            <div className="m-3">
-                                <p>{moviesState.overview}</p>
+                            <p>{moviesState.overview}</p>
+                            <div className="d-flex actors p-4 justify-content-around">
+                                <MovieCredits movieId={moviesState.id} />
                             </div>
-
-                            <div className="d-flex p-3 bg-secondary text-white justify-content-around rounded-lg ">
-                                <MovieCredits movieId={moviesState.id}/>
-                            </div>
-
                         </div>
                     </div>
-
-
-
+                    <div className="row back">
+                        <Link to="/">
+                            <img className="btn_back" src={button_back} alt=""></img>
+                        </Link>
+                    </div>
                 </div>
             );
         }
